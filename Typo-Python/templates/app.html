@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/typo.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='img/icon.png') }}" type="image/x-icon" style="mix-blend-mode: color-burn">
+    <title>Typo</title>
+</head>
+<body>
+    <div class="title">Typo Object to Type Converter for TypeScript</div>
+    <form action="/" method="post">
+        <div class="container">
+            <div class="inputForm">
+                <div class="inputContainer">
+                    <textarea class="inputBox" name="inputText" id="inputText" cols="50" rows="10" placeholder="Enter the Object"></textarea>
+                </div>
+                <button class="generateButton" type="submit">Generate</button>
+                <div class="inputContainer">
+                    <textarea class="responseBox" name="responseText" id="responseText" cols="50" rows="10" placeholder="Your response">{{ data_to_display }}</textarea>
+                    <button class="copyButton" type="button" onclick="copyResponseToClipboard()">Copy</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- <input type="text" class="hiddenInput"> -->
+    <script>
+        function copyResponseToClipboard() {
+            var copyText = document.getElementById("responseText");
+            copyText.select();
+            document.execCommand("copy");
+        }
+    </script>
+   
+</body>
+</html>
