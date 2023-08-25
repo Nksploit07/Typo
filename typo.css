@@ -1,0 +1,98 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    display: inline;
+}
+
+.title {
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0;
+    padding: 0 20px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.inputForm {
+    background-color:rebeccapurple;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 20px;
+    max-width: 100%;
+}
+
+.inputContainer {
+    margin-bottom: 20px;
+    position:relative;
+}
+.inputBox,
+.responseBox {
+    width: 90%;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 16px;
+    background-color: #f7f7f7;
+    resize: none;
+    border: 1px;
+    border-color: black;
+    padding-right: 40px;
+}
+
+.generateButton {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+}
+
+.generateButton:hover {
+    background-color: #45a049;
+}
+
+.copyButton {
+    position: absolute;
+    top: 10%;
+    right: 20px;
+    transform: translateY(-50%);
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.8s;
+    opacity: 5%;
+}
+
+.copyButton:hover {
+    background-color: #45a049;
+    opacity: 100%;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .inputForm {
+        padding: 10px;
+    }
+    
+    .inputBox,
+    .responseBox {
+        font-size: 14px;
+    }
+}
